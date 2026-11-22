@@ -8,7 +8,7 @@ function Nav(props) {
                     Object.keys(props.menu).map
                         (
                             element => {
-                                return <li><a href={props.menu[element]}> {element}</a></li>
+                                return <li key={element} ><a href={props.menu[element]}> {element}</a></li>
                             }
                         )
                 }
