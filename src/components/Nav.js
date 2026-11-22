@@ -8,7 +8,16 @@ function Nav(props) {
                     Object.keys(props.menu).map
                         (
                             element => {
-                                return <li key={element} ><a href={props.menu[element]}> {element}</a></li>
+                                return <li key={element} >
+                                    <a
+                                        href="#"
+                                        onClick={(e) => {
+                                            e.preventDefault(); // чтобы не было перезагрузки страницы
+                                            props.onMenuClick(props.menu[element]); // передаём значение ('main', 'factorial' и т.д.)
+                                        }} >
+                                        {element}
+                                    </a>
+                                </li>
                             }
                         )
                 }

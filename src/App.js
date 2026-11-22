@@ -4,6 +4,7 @@ import Nav from './components/Nav';
 import Main from './components/Main';
 import Footer from './components/Footer';
 import Factorial from './components/Factorial';
+import React from 'react';
 import { useState } from 'react';
 
 function App() {
@@ -12,17 +13,17 @@ function App() {
 
   let menu =
   {
-    "Главная": "/index",
-    "Факториал": "/factorial",
-    "Магазин": "/shop",
-    "Новости": "/news",
-    "О компании": "/about",
-    "Контакты": "/contacts"
+    "Главная": "main",
+    "Факториал": "factorial",
+    "Магазин": "shop",
+    "Новости": "news",
+    "О компании": "about",
+    "Контакты": "contacts"
   }
   return (
     <div className="App">
       <Header />
-      <Nav menu={menu} />
+      <Nav menu={menu} onMenuClick={setPage} />
       {page === 'main' && <Main />}
       {page === 'factorial' && <Factorial />}
       <Footer />
