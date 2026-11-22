@@ -4,10 +4,11 @@ import Nav from './components/Nav';
 import Main from './components/Main';
 import Footer from './components/Footer';
 import Factorial from './components/Factorial';
+import { useState } from 'react';
 
 function App() {
 
-  const [page, setPage] = React.useState('main');
+  const [page, setPage] = useState('main');
 
   let menu =
   {

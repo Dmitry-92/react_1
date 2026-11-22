@@ -1,5 +1,5 @@
 import { useState } from "react";
-import './Factorial.css'
+// import './Factorial.css' добавить стили позже
 
 function Factorial() {
     const [number, setNumber] = useState('');
