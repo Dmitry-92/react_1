@@ -4,6 +4,7 @@ import Nav from './components/Nav';
 import Main from './components/Main';
 import Footer from './components/Footer';
 import Factorial from './components/Factorial';
+import Power from './components/Power';
 import React from 'react';
 import { useState } from 'react';
 
@@ -15,6 +16,7 @@ function App() {
   {
     "Главная": "main",
     "Факториал": "factorial",
+    "Степень": "power",
     "Магазин": "shop",
     "Новости": "news",
     "О компании": "about",
@@ -26,6 +28,7 @@ function App() {
       <Nav menu={menu} onMenuClick={setPage} />
       {page === 'main' && <Main />}
       {page === 'factorial' && <Factorial />}
+      {page === 'power' && <Power />}
       <Footer />
     </div>
   );

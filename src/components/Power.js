@@ -67,3 +67,4 @@ function Power() {
         </div>
     );
 }
+export default Power;
