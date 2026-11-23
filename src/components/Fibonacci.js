@@ -48,3 +48,5 @@ function Fibonacci() {
         </div>
     );
 }
+
+export default Fibonacci;

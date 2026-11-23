@@ -5,6 +5,7 @@ import Main from './components/Main';
 import Footer from './components/Footer';
 import Factorial from './components/Factorial';
 import Power from './components/Power';
+import Fibonacci from './components/Fibonacci';
 import React from 'react';
 import { useState } from 'react';
 
@@ -17,6 +18,7 @@ function App() {
     "Главная": "main",
     "Факториал": "factorial",
     "Степень": "power",
+    "Фибоначчи": "fibonacci",
     "Магазин": "shop",
     "Новости": "news",
     "О компании": "about",
@@ -29,6 +31,7 @@ function App() {
       {page === 'main' && <Main />}
       {page === 'factorial' && <Factorial />}
       {page === 'power' && <Power />}
+      {page === 'fibonacci' && <Fibonacci />}
       <Footer />
     </div>
   );
