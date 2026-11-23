@@ -1,5 +1,5 @@
 import { useState } from "react";
-// import './Factorial.css' добавить стили позже
+import './Factorial.css';
 
 function Factorial() {
     const [number, setNumber] = useState('');
@@ -23,18 +23,20 @@ function Factorial() {
     };
 
     return (
-        <div className="factorial">
-            <h2>Вычисление Факториала</h2>
-            <div>
-                <label>Введите число: </label>
-                <input type="number" value={number} onChange={(e) => setNumber(e.target.value)} min="0" />
-            </div>
-            <button onClick={calculate}>Вычислить</button>
-            {result !== null && (
-                <div className="result">
-                    Результат: {result}
+        <div className="factorial-container">
+            <div className="factorial-card">
+                <h2>Вычисление Факториала</h2>
+                <div>
+                    <label>Введите число: </label>
+                    <input type="number" value={number} onChange={(e) => setNumber(e.target.value)} min="0" className="form-control" />
                 </div>
-            )}
+                <button className="btn-calculate" onClick={calculate}>Вычислить</button>
+                {result !== null && (
+                    <div className="result-box">
+                        Результат: {result}
+                    </div>
+                )}
+            </div>
         </div>
     );
 }
